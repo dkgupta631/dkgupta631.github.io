@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dilip Kumar Gupta — Senior Full Stack Developer</title>
-  <meta name="description" content="Senior Full Stack Software Engineer with 6+ years building scalable SaaS platforms, RESTful APIs, CRM systems, and enterprise web applications using Laravel, PHP, React, and JavaScript."/>
+  <title>DK Gupta — Full Stack Developer</title>
+  <meta name="description" content="Full Stack Developer with 5+ years building web applications, APIs, and scalable systems. Expert in Laravel, PHP, and MySQL."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -146,8 +146,8 @@
     .ring-2 { inset: -55px; border-bottom-color: var(--accent-2); animation: ring-spin 30s linear infinite reverse; }
     .ring-3 { inset: -80px; border-left-color: var(--accent-3); animation: ring-spin 45s linear infinite; }
     @keyframes ring-spin { to { transform: rotate(360deg); } }
-    .avatar-placeholder { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; border: 3px solid var(--surface-2); background: var(--surface); display: flex; align-items: center; justify-content: center; }
-    .avatar-initials { font-family: 'JetBrains Mono', monospace; font-size: 4rem; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .avatar-placeholder { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; border: 3px solid var(--surface-2); background: var(--surface); }
+    .avatar-placeholder img { width: 100%; height: 100%; object-fit: cover; }
     .floating-badge { position: absolute; background: var(--surface-2); border: 1px solid var(--border); border-radius: 100px; padding: 0.45rem 0.9rem; font-size: 0.78rem; font-weight: 500; display: flex; align-items: center; gap: 0.45rem; white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.4); animation: float 6s ease-in-out infinite; }
     .badge-logo { width: 18px; height: 18px; object-fit: contain; }
     .fb-1 { top: -15px; right: -30px; animation-delay: 0s; }
@@ -162,8 +162,8 @@
     /* ABOUT */
     .about { padding: 7rem 0; }
     .about-grid { display: grid; grid-template-columns: 290px 1fr 250px; gap: 2.5rem; align-items: start; }
-    .about-photo-frame { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3/4; background: var(--surface-2); display: flex; align-items: center; justify-content: center; }
-    .about-photo-frame .about-initials-big { font-family: 'JetBrains Mono', monospace; font-size: 5rem; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .about-photo-frame { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3/4; }
+    .about-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
     .about-photo-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 1.5rem; }
     .about-photo-stats { display: flex; gap: 1.25rem; }
     .aph-stat { display: flex; flex-direction: column; }
@@ -229,8 +229,9 @@
     .project-card-glow { position: absolute; top: -80px; right: -80px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
     .project-card-glow--purple { background: radial-gradient(circle, rgba(168,85,247,0.1) 0%, transparent 70%); }
     .project-card-glow--amber { background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%); }
-    .project-img { position: relative; height: 120px; overflow: hidden; background: var(--surface-2); display: flex; align-items: center; justify-content: center; }
-    .project-img-icon { font-size: 2.5rem; opacity: 0.3; }
+    .project-img { position: relative; height: 155px; overflow: hidden; }
+    .project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .project-card:hover .project-img img { transform: scale(1.05); }
     .project-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, var(--surface-3)); }
     .project-card-number { position: absolute; top: 1rem; right: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--text-dim); letter-spacing: 2px; }
     .project-card-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem 0; }
@@ -249,11 +250,9 @@
     .metric-lbl { font-size: 0.62rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
     .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0 1.25rem 0.75rem; }
     .project-tags span { font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; background: var(--accent-dim); color: var(--accent); border-radius: 100px; padding: 0.2rem 0.65rem; }
-    .project-footer { padding: 0.75rem 1.25rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .project-footer { padding: 0.75rem 1.25rem; border-top: 1px solid var(--border); }
     .project-role { font-size: 0.78rem; color: var(--text-dim); display: flex; align-items: center; gap: 0.4rem; }
     .project-role i { color: var(--accent); }
-    .project-link { font-size: 0.78rem; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.3rem; transition: opacity 0.2s; }
-    .project-link:hover { opacity: 0.75; }
 
     /* CONTACT */
     .contact { padding: 7rem 0; }
@@ -261,11 +260,9 @@
     .contact-cta-btn { flex: 1; min-width: 260px; display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); background: var(--surface); transition: all 0.2s; }
     .contact-cta-whatsapp:hover { border-color: #25d366; background: rgba(37,211,102,0.07); }
     .contact-cta-resume:hover { border-color: var(--accent); background: var(--accent-dim); }
-    .contact-cta-cover:hover { border-color: var(--accent-2); background: var(--accent-2-dim); }
     .cta-btn-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
     .contact-cta-whatsapp .cta-btn-icon { background: rgba(37,211,102,0.12); color: #25d366; }
     .contact-cta-resume .cta-btn-icon { background: var(--accent-dim); color: var(--accent); }
-    .contact-cta-cover .cta-btn-icon { background: var(--accent-2-dim); color: var(--accent-2); }
     .cta-btn-text { display: flex; flex-direction: column; gap: 0.2rem; flex: 1; }
     .cta-btn-label { font-size: 0.95rem; font-weight: 600; }
     .cta-btn-sub { font-size: 0.78rem; color: var(--text-dim); }
@@ -380,13 +377,12 @@
       <span class="typed-cursor">|</span>
     </div>
     <p class="hero-summary">
-      Senior Full Stack Engineer with <strong>6+ years</strong> building scalable SaaS platforms,
-      RESTful APIs, and enterprise web apps. Expert in <strong>Laravel, PHP, React</strong> &amp; cloud-native
-      DevOps across the <strong>US, Thailand &amp; APAC</strong> markets.
+      Full Stack Developer with <strong>5+ years</strong> crafting scalable web applications,
+      RESTful APIs, and enterprise-grade systems. Expert in <strong>Laravel, PHP &amp; MySQL</strong>.
     </p>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num" data-count="6">0</span><span class="stat-sym">+</span>
+        <span class="stat-num" data-count="5">0</span><span class="stat-sym">+</span>
         <span class="stat-label">Years Exp.</span>
       </div>
       <div class="stat-divider"></div>
@@ -396,20 +392,19 @@
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num" data-count="4">0</span><span class="stat-sym"></span>
-        <span class="stat-label">Companies</span>
+        <span class="stat-num" data-count="50">0</span><span class="stat-sym">K+</span>
+        <span class="stat-label">Users Served</span>
       </div>
     </div>
     <div class="hero-actions">
-      <a href="DKGCV-ATS2026.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-user"></i> View Cover Letter</a>
-      <a href="DKGCV-ATS2026.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-alt"></i> View Resume</a>
+      <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      <a href="#" target="_blank" class="btn btn-ghost"><i class="fas fa-file-alt"></i> View Resume</a>
     </div>
     <div class="hero-socials">
-      <a href="https://github.com/dkgupta631" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dilip-kumar-gupta-4378b61b1" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:dilipkumargupta631@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://t.me/MrDk855" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="tel:+85569861400" title="Phone"><i class="fas fa-phone"></i></a>
+      <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your@email.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+1234567890" title="Phone"><i class="fas fa-phone"></i></a>
     </div>
   </div>
   <div class="hero-visual">
@@ -418,13 +413,13 @@
       <div class="ring ring-2"></div>
       <div class="ring ring-3"></div>
       <div class="avatar-placeholder">
-        <span class="avatar-initials">DK</span>
+        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=300&h=300&fit=crop&crop=center&q=80" alt="Developer workspace"/>
       </div>
     </div>
     <div class="floating-badge fb-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="badge-logo" alt="Laravel"/> Laravel</div>
-    <div class="floating-badge fb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="badge-logo" alt="Docker"/> Docker</div>
-    <div class="floating-badge fb-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="badge-logo" alt="React"/> React</div>
-    <div class="floating-badge fb-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="badge-logo" alt="PHP"/> PHP</div>
+    <div class="floating-badge fb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="badge-logo" alt="MySQL"/> MySQL</div>
+    <div class="floating-badge fb-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="badge-logo" alt="PHP"/> PHP</div>
+    <div class="floating-badge fb-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="badge-logo" alt="React"/> React</div>
     <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
   </div>
 </section>
@@ -439,50 +434,48 @@
     <div class="about-grid">
       <div class="about-photo-col reveal-up">
         <div class="about-photo-frame">
-          <span class="about-initials-big">DK</span>
+          <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=700&q=80" alt="Developer workspace"/>
           <div class="about-photo-overlay">
             <div class="about-photo-stats">
-              <div class="aph-stat"><span class="aph-val">6+</span><span class="aph-lbl">Years</span></div>
+              <div class="aph-stat"><span class="aph-val">5+</span><span class="aph-lbl">Years</span></div>
               <div class="aph-stat"><span class="aph-val">20+</span><span class="aph-lbl">Projects</span></div>
-              <div class="aph-stat"><span class="aph-val">4</span><span class="aph-lbl">Companies</span></div>
+              <div class="aph-stat"><span class="aph-val">50K+</span><span class="aph-lbl">Users</span></div>
             </div>
           </div>
           <div class="about-photo-badge"><i class="fas fa-check-circle"></i> Available for hire</div>
         </div>
       </div>
       <div class="about-text reveal-left">
-        <p>I'm a <strong>Senior Full Stack Software Developer</strong> with 6+ years of experience building scalable SaaS platforms, CRM systems, RESTful APIs, and enterprise web applications. I've delivered production systems for clients across <strong>the US, Thailand, and the APAC region</strong>.</p>
-        <p>My core stack is <strong>Laravel, PHP, React, and MySQL</strong>, complemented by Docker-containerized microservices, Redis caching, and CI/CD pipelines on <strong>AWS (ECR/ECS)</strong> and Linux/Nginx. I've integrated international payment gateways (Help2Pay, VIZ Pay, Razorpay, Stripe, PayPal &amp; more) and secured APIs with <strong>OAuth &amp; JWT</strong>.</p>
-        <p>Beyond code, I lead Agile/Scrum teams, mentor junior developers, and drive continuous improvements in code quality through <strong>PHPUnit testing and streamlined code-review workflows</strong>. I'm fluent in English, Hindi, Khmer, and Thai.</p>
+        <p>I'm a <strong>Full Stack Developer</strong> with over 5 years of experience building enterprise-grade web applications, RESTful APIs, and SaaS platforms. I've worked with clients across <strong>multiple industries</strong> delivering clean, scalable solutions from concept to production.</p>
+        <p>My core expertise lies in <strong>Laravel, PHP, and MySQL</strong> on the backend, paired with modern JavaScript frameworks on the frontend. I'm passionate about clean architecture, performance optimization, and writing maintainable, well-tested code.</p>
+        <p>Beyond code, I thrive in collaborative environments, enjoy mentoring junior developers, and continuously stay current with the latest industry trends and best practices.</p>
         <div class="about-info-grid">
-          <div class="info-item"><span class="info-label">Location</span><span class="info-value">Gorakhpur, UP, India</span></div>
-          <div class="info-item"><span class="info-label">Email</span><span class="info-value">dilipkumargupta631@gmail.com</span></div>
+          <div class="info-item"><span class="info-label">Location</span><span class="info-value">India</span></div>
+          <div class="info-item"><span class="info-label">Email</span><span class="info-value">your@email.com</span></div>
           <div class="info-item"><span class="info-label">Availability</span><span class="info-value">Open to offers</span></div>
-          <div class="info-item"><span class="info-label">Focus</span><span class="info-value">Senior Full Stack Dev</span></div>
-          <div class="info-item"><span class="info-label">Phone</span><span class="info-value">+855 69861400</span></div>
-          <div class="info-item"><span class="info-label">Languages</span><span class="info-value">EN · HI · KH · TH</span></div>
+          <div class="info-item"><span class="info-label">Focus</span><span class="info-value">Full Stack Dev</span></div>
         </div>
       </div>
       <div class="about-cards reveal-right">
         <div class="about-card">
           <div class="about-card-icon"><i class="fas fa-rocket"></i></div>
           <h3>Performance</h3>
-          <p>Reduced API latency by 30% and improved code-review throughput by 40% on live production systems</p>
+          <p>Optimized queries, reduced API latency, and improved load times across multiple production systems</p>
         </div>
         <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-credit-card"></i></div>
-          <h3>Payments</h3>
-          <p>Integrated 10+ international payment gateways for crypto and fiat currency transactions globally</p>
+          <div class="about-card-icon"><i class="fas fa-users"></i></div>
+          <h3>Collaboration</h3>
+          <p>Strong in Agile teams, code reviews, and cross-functional delivery with design and product</p>
         </div>
         <div class="about-card">
           <div class="about-card-icon"><i class="fas fa-layer-group"></i></div>
           <h3>Full Stack</h3>
-          <p>End-to-end delivery — from database design and microservices to responsive React/Vue frontends</p>
+          <p>End-to-end delivery from database design to responsive UI and third-party API integrations</p>
         </div>
         <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-users"></i></div>
-          <h3>Leadership</h3>
-          <p>IT Manager experience leading Agile teams, DevOps pipelines, and multi-client server environments</p>
+          <div class="about-card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Reliability</h3>
+          <p>High-availability deployments, robust error handling, and zero-downtime release strategies</p>
         </div>
       </div>
     </div>
@@ -502,20 +495,17 @@
         <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
         <div class="timeline-card current">
           <div class="timeline-header">
-            <div>
-              <h3 class="tl-role">Senior Full Stack Developer &amp; IT Manager</h3>
-              <span class="tl-company">Zaffran InfoTech Solution Pvt Ltd — Cambodia</span>
-            </div>
-            <span class="tl-period">Sep 2023 — Present</span>
+            <div><h3 class="tl-role">Full Stack Developer</h3><span class="tl-company">Your Current Company</span></div>
+            <span class="tl-period">Jan 2022 — Present</span>
           </div>
-          <p class="tl-desc">Lead backend engineering for enterprise SaaS platforms using ReactJS, Inertia.js, Laravel, and Filament with Docker-containerized microservices. Oversee CI/CD pipelines, deployment automation, and Linux/Nginx server configuration across multi-client environments. Deliver major feature releases on schedule within Agile/Scrum cycles.</p>
+          <p class="tl-desc">Lead development of enterprise web applications and REST APIs using Laravel and PHP. Architect database schemas, optimize query performance, and collaborate with frontend teams to ship full-stack features on schedule.</p>
           <div class="tl-achievements">
-            <span><i class="fas fa-bolt"></i> −30% API latency</span>
-            <span><i class="fas fa-chart-line"></i> +40% code-review throughput</span>
-            <span><i class="fas fa-shield-alt"></i> OAuth &amp; JWT auth</span>
-            <span><i class="fas fa-credit-card"></i> International payment gateways</span>
+            <span><i class="fas fa-bolt"></i> 25% faster page loads</span>
+            <span><i class="fas fa-database"></i> DB query optimization</span>
+            <span><i class="fas fa-code-branch"></i> Agile sprint delivery</span>
+            <span><i class="fas fa-chart-line"></i> 40% review throughput</span>
           </div>
-          <div class="tl-tags"><span>Laravel</span><span>ReactJS</span><span>Inertia.js</span><span>Vue.js</span><span>Filament</span><span>Docker</span><span>Redis</span><span>MySQL</span><span>AWS</span><span>CI/CD</span></div>
+          <div class="tl-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>REST API</span><span>Vue.js</span><span>CI/CD</span></div>
         </div>
       </div>
 
@@ -523,39 +513,16 @@
         <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <div>
-              <h3 class="tl-role">PHP Developer</h3>
-              <span class="tl-company">Coding Brains Software Solution Pvt Ltd — India</span>
-            </div>
-            <span class="tl-period">Sep 2021 — Aug 2023</span>
+            <div><h3 class="tl-role">Backend Developer</h3><span class="tl-company">Previous Company</span></div>
+            <span class="tl-period">Jun 2019 — Dec 2021</span>
           </div>
-          <p class="tl-desc">Built CRM and enterprise web applications for US-market clients using AngularJS and ReactJS bound to REST APIs, following MVC and SOLID design principles. Developed ERP, e-commerce, and HRM systems, and integrated Webex APIs. Standardized coding guidelines team-wide across Food Management and Hotel Management System projects.</p>
+          <p class="tl-desc">Designed and delivered RESTful APIs for web and mobile clients. Built admin dashboards, automated workflows, and integrated third-party payment and notification services across multiple SaaS products.</p>
           <div class="tl-achievements">
-            <span><i class="fas fa-project-diagram"></i> ERP / CRM / HRM systems</span>
-            <span><i class="fas fa-coins"></i> PayPal, Stripe, Razorpay, Square</span>
-            <span><i class="fas fa-code"></i> MVC &amp; SOLID principles</span>
+            <span><i class="fas fa-project-diagram"></i> 10+ projects delivered</span>
+            <span><i class="fas fa-coins"></i> 20% DB cost reduction</span>
+            <span><i class="fas fa-users"></i> Cross-team collaboration</span>
           </div>
-          <div class="tl-tags"><span>PHP</span><span>Laravel</span><span>ReactJS</span><span>AngularJS</span><span>MySQL</span><span>REST API</span><span>jQuery</span><span>AJAX</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-up">
-        <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <div>
-              <h3 class="tl-role">Associate Developer</h3>
-              <span class="tl-company">Aara Technologies Pvt Ltd — Lucknow, India</span>
-            </div>
-            <span class="tl-period">Jul 2020 — Aug 2021</span>
-          </div>
-          <p class="tl-desc">Developed push-notification, chat, and email systems for global users. Built REST APIs using CodeIgniter for an e-commerce shopping site, real estate websites with PHP, and backend APIs and admin panels for global web and mobile applications.</p>
-          <div class="tl-achievements">
-            <span><i class="fas fa-bell"></i> Push-notification system</span>
-            <span><i class="fas fa-comments"></i> Real-time chat system</span>
-            <span><i class="fas fa-globe"></i> Global web &amp; mobile APIs</span>
-          </div>
-          <div class="tl-tags"><span>PHP</span><span>CodeIgniter</span><span>MySQL</span><span>REST API</span><span>HTML/CSS</span><span>JavaScript</span></div>
+          <div class="tl-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>jQuery</span><span>Bootstrap</span></div>
         </div>
       </div>
 
@@ -563,19 +530,11 @@
         <div class="timeline-marker"><div class="marker-dot"></div></div>
         <div class="timeline-card">
           <div class="timeline-header">
-            <div>
-              <h3 class="tl-role">Jr. Developer</h3>
-              <span class="tl-company">Dealsinfotech.in — Lucknow, India</span>
-            </div>
-            <span class="tl-period">Aug 2019 — Jul 2020</span>
+            <div><h3 class="tl-role">Junior Web Developer</h3><span class="tl-company">Startup / Agency</span></div>
+            <span class="tl-period">2018 — 2019</span>
           </div>
-          <p class="tl-desc">Collaborated with the UI/UX team to launch new features, improving site performance by 25%. Wrote PHPUnit unit tests and documentation to improve release reliability. Designed online restaurant menu pages and reduced bug rate by 20%.</p>
-          <div class="tl-achievements">
-            <span><i class="fas fa-tachometer-alt"></i> +25% site performance</span>
-            <span><i class="fas fa-bug"></i> −20% bug rate</span>
-            <span><i class="fas fa-vial"></i> PHPUnit test coverage</span>
-          </div>
-          <div class="tl-tags"><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>PHPUnit</span></div>
+          <p class="tl-desc">Developed and maintained client websites and custom web applications. Integrated payment gateways, built admin panels, and delivered responsive UIs using HTML, CSS, and JavaScript.</p>
+          <div class="tl-tags"><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>MySQL</span></div>
         </div>
       </div>
 
@@ -594,21 +553,21 @@
       <div class="skills-col reveal-left">
         <h3 class="skills-col-title">Core Technologies</h3>
         <div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>Laravel / PHP</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>MySQL / Redis / MSSQL</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>Laravel / PHP</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>MySQL / MariaDB</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
           <div class="skill-bar-item"><div class="skill-bar-header"><span>REST API Design</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>ReactJS / Inertia.js / Vue.js</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>JavaScript / jQuery / AJAX</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>JavaScript / jQuery</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>React / Vue.js</span><span class="skill-pct">72%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div></div>
         </div>
       </div>
       <div class="skills-col reveal-right">
-        <h3 class="skills-col-title">DevOps &amp; Platforms</h3>
+        <h3 class="skills-col-title">Tools &amp; Platforms</h3>
         <div class="skill-bars">
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>Docker / Microservices</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>Linux / Nginx / Apache</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>AWS (ECR, ECS) / CI/CD</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>Git / GitHub / GitLab / Bitbucket</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>Agile / Scrum / Team Lead</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>Git / GitHub / GitLab</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>Linux / Nginx / Apache</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>AWS / Cloud Services</span><span class="skill-pct">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>Docker / CI/CD</span><span class="skill-pct">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>Agile / Scrum / JIRA</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
         </div>
       </div>
     </div>
@@ -618,7 +577,7 @@
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"><span>Laravel</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span>ReactJS</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span>React</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue"><span>Vue.js</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" alt="jQuery"><span>jQuery</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
@@ -629,7 +588,7 @@
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx"><span>Nginx</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"><span>CodeIgniter</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="JIRA"><span>JIRA</span></div>
         <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg" alt="Composer"><span>Composer</span></div>
       </div>
     </div>
@@ -642,162 +601,77 @@
     <div class="section-header">
       <span class="section-tag">04 / Projects</span>
       <h2 class="section-title">Featured Work</h2>
-      <p class="section-subtitle">Real-world SaaS platforms, payment systems, and enterprise tools shipped for global clients.</p>
+      <p class="section-subtitle">Web applications and systems built for scale and real-world usage.</p>
     </div>
     <div class="projects-grid">
 
       <div class="project-card reveal-up">
         <div class="project-card-glow"></div>
         <div class="project-img">
-          <i class="fas fa-exchange-alt project-img-icon"></i>
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&h=260&fit=crop&q=80" alt="SaaS Platform"/>
           <div class="project-img-overlay"></div>
         </div>
         <div class="project-card-number">01</div>
         <div class="project-card-header">
-          <div class="project-icon-wrap"><i class="fas fa-coins"></i></div>
-          <div class="project-meta"><span class="project-company">Zaffran InfoTech</span><span class="project-year">2023 – 2024</span></div>
+          <div class="project-icon-wrap"><i class="fas fa-building"></i></div>
+          <div class="project-meta"><span class="project-company">Client Project</span><span class="project-year">2023 – 2024</span></div>
         </div>
-        <h3 class="project-title">G+ Services</h3>
-        <p class="project-subtitle">Money Exchange &amp; Remittance Platform</p>
-        <p class="project-desc">Online platform enabling customers to exchange money and send remittances to their home countries with live exchange rates, integrated payment processing, and real-time transaction tracking.</p>
+        <h3 class="project-title">Enterprise SaaS Platform</h3>
+        <p class="project-subtitle">Multi-tenant Resource Management System</p>
+        <p class="project-desc">Architected a multi-tenant SaaS platform handling complex business workflows, role-based access control, real-time notifications, and analytics reporting for enterprise clients.</p>
         <div class="project-metrics">
-          <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Rates</span></div>
-          <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Currency</span></div>
-          <div class="metric"><span class="metric-val">Done</span><span class="metric-lbl">Status</span></div>
+          <div class="metric"><span class="metric-val">10K+</span><span class="metric-lbl">Users</span></div>
+          <div class="metric"><span class="metric-val">99.9%</span><span class="metric-lbl">Uptime</span></div>
+          <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Tenant</span></div>
         </div>
-        <div class="project-tags"><span>ReactJS</span><span>Inertia.js</span><span>Laravel</span><span>Docker</span><span>Filament</span><span>MSSQL</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> Lead Developer</span>
-          <a href="https://exchange.zaffranpay.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
+        <div class="project-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Vue.js</span><span>REST API</span></div>
+        <div class="project-footer"><span class="project-role"><i class="fas fa-user-tie"></i> Full Stack Developer</span></div>
       </div>
 
       <div class="project-card reveal-up">
         <div class="project-card-glow project-card-glow--purple"></div>
         <div class="project-img">
-          <i class="fas fa-money-bill-transfer project-img-icon"></i>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=260&fit=crop&q=80" alt="Analytics Dashboard"/>
           <div class="project-img-overlay"></div>
         </div>
         <div class="project-card-number">02</div>
         <div class="project-card-header">
-          <div class="project-icon-wrap project-icon-wrap--purple"><i class="fas fa-globe"></i></div>
-          <div class="project-meta"><span class="project-company">Zaffran InfoTech</span><span class="project-year">2023 – Present</span></div>
+          <div class="project-icon-wrap project-icon-wrap--purple"><i class="fas fa-chart-bar"></i></div>
+          <div class="project-meta"><span class="project-company">Client Project</span><span class="project-year">2022 – 2023</span></div>
         </div>
-        <h3 class="project-title">G-Tech Payment Gateway</h3>
-        <p class="project-subtitle">International Multi-Currency Payment System</p>
-        <p class="project-desc">Multi-currency deposit and withdrawal platform with agent and merchant role management, transaction records, and integrations with Help2Pay, VIZ Pay, Match2Pay, QT Services, and PowerPay88.</p>
+        <h3 class="project-title">Analytics Dashboard</h3>
+        <p class="project-subtitle">Real-time Data Visualization Platform</p>
+        <p class="project-desc">Built a real-time analytics dashboard with complex data aggregation pipelines, interactive charts, and automated report generation for business intelligence across multiple data sources.</p>
         <div class="project-metrics">
-          <div class="metric"><span class="metric-val">10+</span><span class="metric-lbl">Gateways</span></div>
-          <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Role</span></div>
-          <div class="metric"><span class="metric-val">JWT</span><span class="metric-lbl">Secured</span></div>
+          <div class="metric"><span class="metric-val">5M+</span><span class="metric-lbl">Records</span></div>
+          <div class="metric"><span class="metric-val">Real</span><span class="metric-lbl">Time</span></div>
+          <div class="metric"><span class="metric-val">−40%</span><span class="metric-lbl">Query Time</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Docker</span><span>OAuth</span><span>JWT</span><span>REST API</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> Lead Developer</span>
-          <a href="https://sprint.zaffranpay.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
+        <div class="project-tags"><span>Laravel</span><span>MySQL</span><span>React</span><span>Chart.js</span></div>
+        <div class="project-footer"><span class="project-role"><i class="fas fa-user-tie"></i> Backend Developer</span></div>
       </div>
 
       <div class="project-card reveal-up">
         <div class="project-card-glow project-card-glow--amber"></div>
         <div class="project-img">
-          <i class="fas fa-ticket-alt project-img-icon"></i>
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&h=260&fit=crop&q=80" alt="Mobile API"/>
           <div class="project-img-overlay"></div>
         </div>
         <div class="project-card-number">03</div>
         <div class="project-card-header">
-          <div class="project-icon-wrap project-icon-wrap--amber"><i class="fas fa-music"></i></div>
-          <div class="project-meta"><span class="project-company">Zaffran InfoTech</span><span class="project-year">2023 – Present</span></div>
+          <div class="project-icon-wrap project-icon-wrap--amber"><i class="fas fa-mobile-alt"></i></div>
+          <div class="project-meta"><span class="project-company">Freelance</span><span class="project-year">2021 – 2022</span></div>
         </div>
-        <h3 class="project-title">G-CON Concert Booking</h3>
-        <p class="project-subtitle">Online Table Booking with Integrated Payments</p>
-        <p class="project-desc">Online concert table booking system with seat management, real-time availability, integrated payment processing, and admin dashboard for event management in Cambodia.</p>
+        <h3 class="project-title">Mobile API Backend</h3>
+        <p class="project-subtitle">RESTful API for iOS &amp; Android</p>
+        <p class="project-desc">Designed and built a robust REST API powering mobile apps on both platforms. Implemented JWT auth, push notifications, real-time features via WebSockets, and media upload via cloud storage.</p>
         <div class="project-metrics">
-          <div class="metric"><span class="metric-val">Real</span><span class="metric-lbl">Time</span></div>
-          <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Pay</span></div>
-          <div class="metric"><span class="metric-val">Admin</span><span class="metric-lbl">Panel</span></div>
+          <div class="metric"><span class="metric-val">50K+</span><span class="metric-lbl">App Users</span></div>
+          <div class="metric"><span class="metric-val">99.8%</span><span class="metric-lbl">API Uptime</span></div>
+          <div class="metric"><span class="metric-val">JWT</span><span class="metric-lbl">Auth</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Filament</span><span>Livewire</span><span>Docker</span><span>MySQL</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> Full Stack Developer</span>
-          <a href="https://gconlive.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-
-      <div class="project-card reveal-up">
-        <div class="project-card-glow"></div>
-        <div class="project-img">
-          <i class="fas fa-utensils project-img-icon"></i>
-          <div class="project-img-overlay"></div>
-        </div>
-        <div class="project-card-number">04</div>
-        <div class="project-card-header">
-          <div class="project-icon-wrap"><i class="fas fa-motorcycle"></i></div>
-          <div class="project-meta"><span class="project-company">Zaffran InfoTech</span><span class="project-year">2024 – Present</span></div>
-        </div>
-        <h3 class="project-title">GO Bong Delivery</h3>
-        <p class="project-subtitle">Food Delivery Platform — Poipet, Cambodia</p>
-        <p class="project-desc">Full-featured online food delivery system for Poipet City with integrated payments, real-time map tracking, vendor management, and customer-facing ordering flow.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-val">Maps</span><span class="metric-lbl">Tracking</span></div>
-          <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Vendor</span></div>
-          <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Pay</span></div>
-        </div>
-        <div class="project-tags"><span>Laravel</span><span>Inertia.js</span><span>Vue.js</span><span>Filament</span><span>Docker</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> Full Stack Developer</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal-up">
-        <div class="project-card-glow project-card-glow--purple"></div>
-        <div class="project-img">
-          <i class="fas fa-store project-img-icon"></i>
-          <div class="project-img-overlay"></div>
-        </div>
-        <div class="project-card-number">05</div>
-        <div class="project-card-header">
-          <div class="project-icon-wrap project-icon-wrap--purple"><i class="fas fa-database"></i></div>
-          <div class="project-meta"><span class="project-company">Coding Brains</span><span class="project-year">2022 – 2023</span></div>
-        </div>
-        <h3 class="project-title">Kissinger Dashboard</h3>
-        <p class="project-subtitle">Multi-Store Database Management System</p>
-        <p class="project-desc">Dashboard for managing databases across multiple web stores, with rich DataTable views, inline editing, advanced filtering, and cross-store reporting for US-market clients.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Store</span></div>
-          <div class="metric"><span class="metric-val">CRUD</span><span class="metric-lbl">Tables</span></div>
-          <div class="metric"><span class="metric-val">USA</span><span class="metric-lbl">Client</span></div>
-        </div>
-        <div class="project-tags"><span>Laravel</span><span>ReactJS</span><span>DataTable</span><span>MySQL</span><span>REST API</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> PHP Developer</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal-up">
-        <div class="project-card-glow project-card-glow--amber"></div>
-        <div class="project-img">
-          <i class="fas fa-medal project-img-icon"></i>
-          <div class="project-img-overlay"></div>
-        </div>
-        <div class="project-card-number">06</div>
-        <div class="project-card-header">
-          <div class="project-icon-wrap project-icon-wrap--amber"><i class="fas fa-share-alt"></i></div>
-          <div class="project-meta"><span class="project-company">Coding Brains</span><span class="project-year">2021 – 2022</span></div>
-        </div>
-        <h3 class="project-title">Quality Referee</h3>
-        <p class="project-subtitle">Referral Platform with Square Payment Integration</p>
-        <p class="project-desc">Referral-based web platform with automated reward tracking, user management, and Square payment gateway integration for processing payouts and subscriptions.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-val">Square</span><span class="metric-lbl">Payments</span></div>
-          <div class="metric"><span class="metric-val">Auto</span><span class="metric-lbl">Rewards</span></div>
-          <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Status</span></div>
-        </div>
-        <div class="project-tags"><span>Laravel</span><span>Square API</span><span>PHP</span><span>MySQL</span></div>
-        <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> PHP Developer</span>
-          <a href="https://qualityreferee.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
+        <div class="project-tags"><span>PHP</span><span>Laravel</span><span>REST API</span><span>Push Notif.</span><span>AWS S3</span></div>
+        <div class="project-footer"><span class="project-role"><i class="fas fa-user-tie"></i> API Developer</span></div>
       </div>
 
     </div>
@@ -810,49 +684,36 @@
     <div class="section-header">
       <span class="section-tag">05 / Contact</span>
       <h2 class="section-title">Let's Connect</h2>
-      <p class="section-subtitle">Open to full-time opportunities, freelance projects, and interesting engineering challenges.</p>
+      <p class="section-subtitle">Open to opportunities, freelance work, and interesting engineering challenges.</p>
     </div>
     <div class="contact-cta-row reveal-up">
-      <a href="https://wa.me/85569861400" target="_blank" class="contact-cta-btn contact-cta-whatsapp">
+      <a href="https://wa.me/1234567890" target="_blank" class="contact-cta-btn contact-cta-whatsapp">
         <div class="cta-btn-icon"><i class="fab fa-whatsapp"></i></div>
         <div class="cta-btn-text"><span class="cta-btn-label">Chat on WhatsApp</span><span class="cta-btn-sub">Fastest response</span></div>
         <i class="fas fa-arrow-right cta-btn-arrow"></i>
       </a>
-      <a href="DKGCV-ATS2026.pdf" target="_blank" class="contact-cta-btn contact-cta-resume">
+      <a href="#" target="_blank" class="contact-cta-btn contact-cta-resume">
         <div class="cta-btn-icon"><i class="fas fa-file-alt"></i></div>
-        <div class="cta-btn-text"><span class="cta-btn-label">View Resume</span><span class="cta-btn-sub">Full CV · 6+ years experience</span></div>
-        <i class="fas fa-arrow-right cta-btn-arrow"></i>
-      </a>
-      <a href="DKGCV-ATS2026.pdf" target="_blank" class="contact-cta-btn contact-cta-cover">
-        <div class="cta-btn-icon"><i class="fas fa-envelope-open-text"></i></div>
-        <div class="cta-btn-text"><span class="cta-btn-label">View Cover Letter</span><span class="cta-btn-sub">Opens in new tab</span></div>
+        <div class="cta-btn-text"><span class="cta-btn-label">View Resume</span><span class="cta-btn-sub">Full CV · 5+ years experience</span></div>
         <i class="fas fa-arrow-right cta-btn-arrow"></i>
       </a>
     </div>
     <div class="contact-links-row reveal-up">
-      <a href="mailto:dilipkumargupta631@gmail.com" class="contact-link-card">
+      <a href="mailto:your@email.com" class="contact-link-card">
         <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
-        <div><span class="contact-link-label">Email</span><span class="contact-link-value">dilipkumargupta631@gmail.com</span></div>
+        <div><span class="contact-link-label">Email</span><span class="contact-link-value">your@email.com</span></div>
       </a>
-      <a href="tel:+85569861400" class="contact-link-card">
+      <a href="tel:+1234567890" class="contact-link-card">
         <div class="contact-link-icon"><i class="fas fa-phone"></i></div>
-        <div><span class="contact-link-label">Phone</span><span class="contact-link-value">+855 69861400</span></div>
+        <div><span class="contact-link-label">Phone</span><span class="contact-link-value">+XX-XXXXXXXXXX</span></div>
       </a>
-      <a href="https://www.linkedin.com/in/dilip-kumar-gupta-4378b61b1" target="_blank" class="contact-link-card">
+      <a href="https://linkedin.com" target="_blank" class="contact-link-card">
         <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
-        <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">dilip-kumar-gupta-4378b61b1</span></div>
+        <div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">linkedin.com/in/dkgupta</span></div>
       </a>
-      <a href="https://github.com/dkgupta631" target="_blank" class="contact-link-card">
+      <a href="https://github.com" target="_blank" class="contact-link-card">
         <div class="contact-link-icon"><i class="fab fa-github"></i></div>
-        <div><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/dkgupta631</span></div>
-      </a>
-      <a href="https://t.me/MrDk855" target="_blank" class="contact-link-card">
-        <div class="contact-link-icon"><i class="fab fa-telegram"></i></div>
-        <div><span class="contact-link-label">Telegram</span><span class="contact-link-value">@MrDk855</span></div>
-      </a>
-      <a href="https://dkgupta631.github.io" target="_blank" class="contact-link-card">
-        <div class="contact-link-icon"><i class="fas fa-globe"></i></div>
-        <div><span class="contact-link-label">Portfolio</span><span class="contact-link-value">dkgupta631.github.io</span></div>
+        <div><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/dkgupta</span></div>
       </a>
     </div>
   </div>
@@ -863,12 +724,11 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo"><span class="logo-bracket">{</span><span class="logo-name">DK</span><span class="logo-bracket">}</span></div>
-      <p class="footer-copy">© 2026 Dilip Kumar Gupta. Crafted with <span class="heart">♥</span> in India.</p>
+      <p class="footer-copy">© 2026 DK Gupta. Crafted with <span class="heart">♥</span> in India.</p>
       <div class="footer-links">
-        <a href="https://github.com/dkgupta631" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/dilip-kumar-gupta-4378b61b1" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:dilipkumargupta631@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://t.me/MrDk855" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -966,7 +826,7 @@ document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click
 }));
 
 // TYPED TEXT
-const words = ['scalable SaaS platforms.','RESTful APIs.','Docker microservices.','full-stack solutions.','payment gateways.','enterprise web apps.'];
+const words = ['scalable web apps.','RESTful APIs.','elegant backend systems.','full-stack solutions.','SaaS platforms.'];
 let wi=0, ci=0, del=false;
 const tel = document.getElementById('typed-text');
 (function type() {
@@ -977,15 +837,26 @@ const tel = document.getElementById('typed-text');
 })();
 
 // COUNTERS
-document.querySelectorAll('.stat-num[data-count]').forEach(el =>
-  new IntersectionObserver((ent,o)=>{if(ent[0].isIntersecting){o.unobserve(el);const t=+el.dataset.count,s=performance.now();(function f(n){const p=Math.min((n-s)/1500,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t);if(p<1)requestAnimationFrame(f);else el.textContent=t;})(s);}},{threshold:.5}).observe(el)
-);
+new IntersectionObserver((entries,obs) => entries.forEach(e => {
+  if (!e.isIntersecting) return; obs.unobserve(e.target);
+  const target = +e.target.dataset.count, start = performance.now();
+  (function tick(now) {
+    const t = Math.min((now-start)/1500,1), ease = 1-Math.pow(1-t,3);
+    e.target.textContent = Math.floor(ease*target);
+    if (t<1) requestAnimationFrame(tick); else e.target.textContent=target;
+  })(start);
+}), {threshold:.5}).observe ?
+  document.querySelectorAll('.stat-num[data-count]').forEach(el =>
+    new IntersectionObserver((ent,o)=>{if(ent[0].isIntersecting){o.unobserve(el);const t=+el.dataset.count,s=performance.now();(function f(n){const p=Math.min((n-s)/1500,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t);if(p<1)requestAnimationFrame(f);else el.textContent=t;})(s);}},{threshold:.5}).observe(el)
+  ) : null;
 
 // SKILL BARS
-document.querySelectorAll('.skill-bar-fill').forEach(el=>new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){el.style.width=el.dataset.width+'%';o.unobserve(el);}},{threshold:.3}).observe(el));
+new IntersectionObserver((ent,obs)=>ent.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.width+'%';obs.unobserve(e.target);}}),{threshold:.3})
+  .observe ? document.querySelectorAll('.skill-bar-fill').forEach(el=>new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){el.style.width=el.dataset.width+'%';o.unobserve(el);}},{threshold:.3}).observe(el)) : null;
 
 // SCROLL REVEAL
-document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right').forEach(el=>new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){el.classList.add('revealed');o.unobserve(el);}},{threshold:.08}).observe(el));
+new IntersectionObserver((ent,obs)=>ent.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}}),{threshold:.1})
+  .observe ? document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right').forEach(el=>new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){el.classList.add('revealed');o.unobserve(el);}},{threshold:.08}).observe(el)) : null;
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
