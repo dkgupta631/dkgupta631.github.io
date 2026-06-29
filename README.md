@@ -1,2 +1,2 @@
-# dilipkumargupta
-dilipkumargupta.github.io
+# dilipkumargupta URL
+https://dkgupta631.github.io
