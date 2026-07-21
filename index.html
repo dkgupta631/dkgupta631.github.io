@@ -219,6 +219,8 @@
     .tl-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 0.75rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; transition: border-color 0.2s, transform 0.2s, background 0.2s; }
     .tl-item:hover { border-color: var(--accent); transform: translateY(-3px); background: var(--surface-2); }
     .tl-item img { width: 36px; height: 36px; object-fit: contain; }
+    /* These official marks are black by default; invert them for the dark theme. */
+    .tl-item img.tech-icon--light { filter: brightness(0) invert(1); }
     .tl-item span { font-size: 0.7rem; color: var(--text-muted); }
 
     /* PROJECTS */
@@ -517,7 +519,7 @@
             <span><i class="fas fa-shield-alt"></i> OAuth &amp; JWT auth</span>
             <span><i class="fas fa-credit-card"></i> International payment gateways</span>
           </div>
-          <div class="tl-tags"><span>Laravel</span><span>ReactJS</span><span>Inertia.js</span><span>Vue.js</span><span>Filament</span><span>Java</span><span>Docker</span><span>Redis</span><span>MySQL</span><span>AWS</span><span>CI/CD</span></div>
+          <div class="tl-tags"><span>Laravel</span><span>ReactJS</span><span>Next.js</span><span>Inertia.js</span><span>Vue.js</span><span>Node.js</span><span>Express</span><span>Filament</span><span>Java</span><span>Docker</span><span>Redis</span><span>Postgres</span><span>AWS</span><span>CI/CD</span></div>
         </div>
       </div>
 
@@ -537,7 +539,7 @@
             <span><i class="fas fa-coins"></i> PayPal, Stripe, Razorpay, Square</span>
             <span><i class="fas fa-code"></i> MVC &amp; SOLID principles</span>
           </div>
-          <div class="tl-tags"><span>PHP</span><span>Laravel</span><span>ReactJS</span><span>AngularJS</span><span>MySQL</span><span>REST API</span><span>jQuery</span><span>AJAX</span></div>
+          <div class="tl-tags"><span>Laravel</span><span>ReactJS</span><span>Next.js</span><span>AngularJS</span><span>MSSQL</span><span>MySQL</span><span>REST API</span><span>jQuery</span><span>AJAX</span><span>Custom Design</span></div>
         </div>
       </div>
 
@@ -577,7 +579,7 @@
             <span><i class="fas fa-bug"></i> −20% bug rate</span>
             <span><i class="fas fa-vial"></i> Unit test coverage</span>
           </div>
-          <div class="tl-tags"><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Unit</span></div>
+          <div class="tl-tags"><span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Unit Testing</span><span>Website Template Design</span></div>
         </div>
       </div>
 
@@ -597,10 +599,10 @@
         <h3 class="skills-col-title">Core Technologies</h3>
         <div class="skill-bars">
           <div class="skill-bar-item"><div class="skill-bar-header"><span>Laravel / PHP</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>MySQL / Redis / MSSQL</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>REST API Design</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>ReactJS / Inertia.js / Vue.js</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-header"><span>JavaScript / jQuery / AJAX</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>MySQL / Redis / MSSQL / Postgres</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>REST APIs / Node</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>ReactJS / Next.js /Inertia.js / Vue.js/ AngularJS</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-header"><span>JavaScript / jQuery / AJAX / Custom design</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
           <div class="skill-bar-item"><div class="skill-bar-header"><span>Java</span><span class="skill-pct">72%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div></div>
         </div>
       </div>
@@ -618,23 +620,29 @@
     <div class="tech-logos-section reveal-up">
       <h3 class="skills-col-title">Technology Stack</h3>
       <div class="tech-logos-grid">
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel"><span>Laravel</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><span>ReactJS</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue"><span>Vue.js</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" alt="jQuery"><span>jQuery</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis"><span>Redis</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS"><span>AWS</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" alt="Nginx"><span>Nginx</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"><span>CodeIgniter</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg" alt="Composer"><span>Composer</span></div>
-        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/laravel/laravel-original.svg" alt="Laravel"><span>Laravel</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="React"><span>ReactJS</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg" alt="Vue"><span>Vue.js</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redis/redis-original.svg" alt="Redis"><span>Redis</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS"><span>AWS</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+        <div class="tl-item"><img class="tech-icon--light" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nginx/nginx-original.svg" alt="Nginx"><span>Nginx</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"><span>CodeIgniter</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/composer/composer-original.svg" alt="Composer"><span>Composer</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+        <div class="tl-item"><img class="tech-icon--light" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/nextdotjs.svg" alt="Next.js"><span>Next.js</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>Postgres</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Microsoft SQL Server"><span>MSSQL</span></div>
+        <div class="tl-item"><img class="tech-icon--light" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" alt="Express"><span>Express</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angularjs/angularjs-original.svg" alt="AngularJS"><span>AngularJS</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="tl-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jquery/jquery-original.svg" alt="jQuery"><span>jQuery</span></div>
       </div>
     </div>
   </div>
@@ -695,7 +703,7 @@
           <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Role</span></div>
           <div class="metric"><span class="metric-val">JWT</span><span class="metric-lbl">Secured</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Docker</span><span>OAuth</span><span>JWT</span><span>REST API</span></div>
+        <div class="project-tags"><span>Laravel</span><span>Docker</span><span>OAuth</span><span>JWT</span><span>REST API</span><span>International Payment Gateway Integrations</span><span>MySQL</span></div>
         <div class="project-footer">
           <span class="project-role"><i class="fas fa-user-tie"></i> Lead Developer</span>
           <a href="https://sprint.zaffranpay.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
@@ -721,7 +729,7 @@
           <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Pay</span></div>
           <div class="metric"><span class="metric-val">Admin</span><span class="metric-lbl">Panel</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Filament</span><span>Livewire</span><span>Docker</span><span>MySQL</span></div>
+        <div class="project-tags"><span>Laravel</span><span>Filament</span><span>Livewire</span><span>Docker</span><span>Postgres</span><span>AJAX</span><span>HTML</span><span>CSS</span></div>
         <div class="project-footer">
           <span class="project-role"><i class="fas fa-user-tie"></i> Full Stack Developer</span>
           <a href="https://gconlive.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
@@ -747,7 +755,7 @@
           <div class="metric"><span class="metric-val">Multi</span><span class="metric-lbl">Vendor</span></div>
           <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Pay</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Inertia.js</span><span>Vue.js</span><span>Filament</span><span>Docker</span></div>
+        <div class="project-tags"><span>Laravel</span><span>Inertia.js</span><span>Vue.js</span><span>Filament</span><span>Docker</span><span>Postgres</span></div>
         <div class="project-footer">
           <span class="project-role"><i class="fas fa-user-tie"></i> Full Stack Developer</span>
         </div>
@@ -772,7 +780,7 @@
           <div class="metric"><span class="metric-val">CRUD</span><span class="metric-lbl">Tables</span></div>
           <div class="metric"><span class="metric-val">USA</span><span class="metric-lbl">Client</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>ReactJS</span><span>DataTable</span><span>MySQL</span><span>REST API</span></div>
+        <div class="project-tags"><span>Laravel</span><span>ReactJS</span><span>DataTable</span><span>Editor</span><span>REST API</span><span>Oracle</span></div>
         <div class="project-footer">
           <span class="project-role"><i class="fas fa-user-tie"></i> PHP Developer</span>
         </div>
@@ -797,9 +805,9 @@
           <div class="metric"><span class="metric-val">Auto</span><span class="metric-lbl">Rewards</span></div>
           <div class="metric"><span class="metric-val">Live</span><span class="metric-lbl">Status</span></div>
         </div>
-        <div class="project-tags"><span>Laravel</span><span>Square API</span><span>PHP</span><span>MySQL</span></div>
+        <div class="project-tags"><span>Java</span><span>Square Payment Gateway API</span><span>Rest APIs</span><span>MySQL</span></div>
         <div class="project-footer">
-          <span class="project-role"><i class="fas fa-user-tie"></i> PHP Developer</span>
+          <span class="project-role"><i class="fas fa-user-tie"></i> Java Developer</span>
           <a href="https://qualityreferee.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
         </div>
       </div>
@@ -827,7 +835,7 @@
         <div class="cta-btn-text"><span class="cta-btn-label">View Resume</span><span class="cta-btn-sub">Full CV · 6+ years experience</span></div>
         <i class="fas fa-arrow-right cta-btn-arrow"></i>
       </a>
-      <a href="DKGCV-ATS2026.pdf" target="_blank" class="contact-cta-btn contact-cta-cover">
+      <a href="DKG_Cover_Letter_2026.pdf" target="_blank" class="contact-cta-btn contact-cta-cover">
         <div class="cta-btn-icon"><i class="fas fa-envelope-open-text"></i></div>
         <div class="cta-btn-text"><span class="cta-btn-label">View Cover Letter</span><span class="cta-btn-sub">Opens in new tab</span></div>
         <i class="fas fa-arrow-right cta-btn-arrow"></i>
